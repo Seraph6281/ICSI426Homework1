@@ -1,5 +1,7 @@
 /**
- *
+ * Performs Vigenere Cipher on given plaintext
+ * @autuor Yingzhao (Seraph) Ma
+ * @date February 18, 2025
  */
 
 import java.security.SecureRandom;
