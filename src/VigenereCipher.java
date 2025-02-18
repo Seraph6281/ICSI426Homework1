@@ -1,11 +1,11 @@
-/**
- * Performs Vigenere Cipher on given plaintext
- * @autuor Yingzhao (Seraph) Ma
- * @date February 18, 2025
- */
-
 import java.security.SecureRandom;
 
+/**
+ * Provides Vigenere Cipher encryption.
+ * generating random keys for encryption.
+ *
+ * @author Yingzhao Ma
+ */
 public class VigenereCipher {
 
     public static String generateRandomKey(String plainText){
