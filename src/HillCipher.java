@@ -7,6 +7,7 @@
  * Non-multiples of the block size are padded before encryption.
  *
  * @author Yingzhao (Seraph) Ma
+ * @version 1.1
  */
 
 public class HillCipher {
@@ -67,7 +68,7 @@ public class HillCipher {
                 cipherVector[row] = sum % 26;
             }
 
-            // Convert cipher vector to text
+            // Converts cipher vector to text
             for (int num : cipherVector) {
                 cipherText.append(numToChar(num));
             }
