@@ -2,9 +2,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * The Driver class serves as the main entry point and controller for the encryption process.
- * It integrates the functionality of different encryption methods including Vigenère Cipher,
- * Row Transposition Cipher, and Hill Cipher to encrypt a given plaintext.
+ * The main entry point and controller for the encryption process.
+ * @author Yingzhao (Seraph) Ma
+ * @version 1.1
  */
 public class Driver {
 
