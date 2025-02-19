@@ -1,18 +1,37 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * The Driver class serves as the main entry point and controller for the encryption process.
+ * It integrates the functionality of different encryption methods including Vigenère Cipher,
+ * Row Transposition Cipher, and Hill Cipher to encrypt a given plaintext.
+ */
 public class Driver {
 
+    /**
+     * Initiates the encryption process
+     */
     public static void start(){
         encrypt(plainTextInput(), hillKeyMatrixInput());
     }
 
+    /**
+     * Prompts the user to input a plaintext message and captures the input.
+     * @return a string containing the plaintext entered by the user
+     */
     public static String plainTextInput(){
         System.out.println("Please enter a plaintext: ");
         Scanner scan = new Scanner(System.in);
         return scan.nextLine();
     }
 
+    /**
+     * Prompts the user to input the size of a square key matrix and the matrix values
+     * for use in the Hill Cipher encryption.
+     * Supports 2x2 or 3x3 matrices.
+     *
+     * @return a two-dimensional integer array representing the Hill Cipher key matrix
+     */
     public static int[][] hillKeyMatrixInput(){
         System.out.println("Support 2*2 or 3*3 Hill Cipher square key matrix. Please indicate the size: ");
         Scanner scanSize = new Scanner(System.in);
@@ -30,6 +49,11 @@ public class Driver {
         return hillKeyMatrix;
     }
 
+    /**
+     * Encrypts the provided plaintext using a combination of the three encryption methods:
+     * @param plaintext the plaintext to be encrypted
+     * @param hillKeyMatrix the key matrix to be used in the Hill Cipher encryption
+     */
     public static void encrypt(String plaintext, int[][] hillKeyMatrix) {
         // Vigenère Cipher Encryption
         String vigenereKey = VigenereCipher.generateRandomKey(plaintext);
